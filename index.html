@@ -1,0 +1,161 @@
+
+<html>
+<head>
+
+<style>
+.btn{
+position:relative;
+padding:1.4rem 4.2rem;
+padding-right:3.2rem;
+font-size:1.4rem;
+color:var(--inv);
+letter-spacing:1.1rem;
+text-transform:uppercase;
+transition:all 500ms cubic-bezier(0.77,0,0.175,1);
+cursor:pointer;
+
+
+}
+.btn:before, .btn:after{
+
+content: ' ';
+position:absolute;
+transition:inherit;
+z-index:-1;
+}
+.btn:hover{
+color:var(--def);
+transition-delay:.5s;
+}
+.btn:hover:before{
+
+transition-delay:0s;
+}
+.btn:hover:after{
+background:var(--inv);
+transition-delay:.34s;
+
+}
+.from-top:before, .from-top:after{
+    right:0;
+height:0;
+width:100%;
+}
+.form-top:before{
+bottom:0px;
+border:1px solid var(--inv);
+border-top:0;
+border-bottom:0;
+}
+.from-top:after{
+top:0;
+height:0;
+}
+.from-top:hover:before, .from-top:hover:after{
+height:100%;
+}
+/*   global settings */
+
+*,*:before, *:after{
+box-sizing:border-box;
+}
+from-left:before, .from-left:after{
+   top :0;
+width:0;
+height:100%;
+}
+.form-left:before{
+bottom:0px;
+border:1px solid var(--inv);
+border-top:0;
+border-bottom:0;
+}
+.from-left:after{
+right:0;
+width:0;
+}
+.from-left:hover:before, .from-left:hover:after{
+  width:100%;
+}
+/*   global settings */
+
+*,*:before, *:after{
+box-sizing:border-box;
+}
+from-right:before, .from-right:after{
+   top :0;
+width:0;
+height:100%;
+}
+.from-right:before{
+bottom:0px;
+border:1px solid var(--inv);
+border-top:0;
+border-bottom:0;
+}
+.from-right:after{
+left:0;
+width:0;
+}
+.from-right:hover:before, .from-right:hover:after{
+  width:100%;
+}
+.from-bottom:before, .from-bottom:after{
+  left:0;
+  height:0;
+  width:100%;
+}
+.from-bottom:before{
+bottom:0px;
+border:1px solid var(--inv);
+border-top:0;
+border-bottom:0;
+}
+.from-bottom:after{
+bottom:0;
+height:0;
+}
+.from-bottom:hover:before, .from-bottom:hover:after{
+  height:100%;
+}
+.from-center:before, .from-center:after{
+   left:0;
+height:0;
+width:100%;
+}
+.form-center:before{
+bottom:0px;
+border:1px solid var(--inv);
+border-top:0;
+border-bottom:0;
+}
+.from-center:after{
+top:0;
+height:100%;
+}
+.from-center:hover:before, .from-center:hover:after{
+  height:100%;
+}
+body{
+--def:#96B7C4;
+--inv:#fff;
+display:flex;
+justify-content:center;
+flex-direction:column;
+height:100vh;
+width:100%;
+background-image:linear-gradient(-25deg, pink 50%, aqua 50%);
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="btn from-top">FROM TOP</div>
+<div class="btn from-left">from left</div>
+<div class="btn from-right">from right</div>
+<div class="btn from-center">from center</div>
+<div class="btn from-bottom">from bottom</div>
+</body>
+</html>
